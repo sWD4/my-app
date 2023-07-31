@@ -3,7 +3,7 @@ import Footer from "./component/layouts/Footer"
 import Header from "./component/layouts/Header"
 import './App.css'
 import './component/css/style.css'
-import { Route,Routes } from "react-router-dom"
+//import { Form, Route,Routes } from "react-router-dom"
 import About from "./component/About"
 import Team from "./component/Team"
 import Contact from "./component/Contact"
@@ -12,11 +12,22 @@ import State1 from "./component/State1"
 import Props from "./component/Props"
 import { useState } from "react"
 import HideShowToggle from "./component/HideShowToggle"
+import Condition from "./component/Condition"
+import User from "./component/User"
 // import PageNotFound from "./component/PageNotFound"
 // import Click from "./component/Click"
-
+import Form from "./component/Form"
+import Cstate from "./component/Cstate"
+import Constructor from "./component/LifeCycleMethod/Constructor"
+import Render1 from "./component/LifeCycleMethod/Render1"
+import ComponentDidMount from "./component/LifeCycleMethod/ComponentDidMount"
+import UseState from "./component/Hooks/UseState"
+import UseEffect from "./component/Hooks/UseEffect"
+import UseEffect1 from "./component/Hooks/UseEffect1"
+import UseEffectAPI from "./component/Hooks/UseEffectAPI"
 function App() {
   const[data,setdata] = useState('shubham sharma')
+  let name = 'shubham'
   return (
     <>
     <Header/>
@@ -25,7 +36,18 @@ function App() {
     {/* <State1/> */}
     {/* <Props name = {data}/>
     <button onClick={()=>setdata('ram')}>click me</button> */}
-    <HideShowToggle/>
+    {/* <HideShowToggle/> */}
+    {/* <Condition/> */}
+    {/* <Form/> */}
+    {/* <User n = {name}/> */}
+    {/* <Cstate/> */}
+    {/* <Constructor/> */}
+    {/* <Render1/> */}
+    {/* <ComponentDidMount/> */}
+    {/* <useState/> */}
+    {/* <UseEffect/> */}
+    {/* <UseEffect1/> */}
+    <UseEffectAPI/>
     {/* <Routes>
       <Route path="/" element = {<Home/>} />
       <Route path="/about" element = {<About/>} />
