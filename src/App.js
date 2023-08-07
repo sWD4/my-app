@@ -25,6 +25,9 @@ import UseState from "./component/Hooks/UseState"
 import UseEffect from "./component/Hooks/UseEffect"
 import UseEffect1 from "./component/Hooks/UseEffect1"
 import UseEffectAPI from "./component/Hooks/UseEffectAPI"
+import NextedList from "./component/Hooks/NextedList"
+import CertificateDisplay from "./component/Hooks/CertificateDisplay"
+
 function App() {
   const[data,setdata] = useState('shubham sharma')
   let name = 'shubham'
@@ -47,7 +50,10 @@ function App() {
     {/* <useState/> */}
     {/* <UseEffect/> */}
     {/* <UseEffect1/> */}
-    <UseEffectAPI/>
+    {/* <UseEffectAPI/> */}
+    {/* <NextedList/> */}
+    <CertificateDisplay/>
+    
     {/* <Routes>
       <Route path="/" element = {<Home/>} />
       <Route path="/about" element = {<About/>} />

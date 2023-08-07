@@ -25,6 +25,13 @@ function UseEffectAPI() {
       <button onClick={() => setContent("comments")}>comments</button>
       <h1>{content}</h1>
       <button onClick={() => setCount(count + 1)}>count {count}</button>
+      <ul>  
+        { items && items.map((item)=>{
+           return <li key = {item.id}>{item.id}</li>
+        })
+
+        }
+      </ul>
     </>
   );
 }
