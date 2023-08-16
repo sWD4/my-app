@@ -5,14 +5,10 @@ const App = () => {
 
   useEffect(() => {
     // Fetch the data from the API.
-    fetch("https://pnintership.onrender.com/api/getAllCertificate")
+    fetch("https://backendapi-5fzj.onrender.com/api/getalluser")
       .then((response) => response.json())
-      .then((data) => {
-        // Set the state variable to the data.
-        // console.log(data.data)
-        setData(data.data);
-      });
-  }, []);
+      .then((json) => setData(json.getalluser));
+    }, []);
 
   // Iterate over the data and render the results.
   return (
@@ -21,18 +17,18 @@ const App = () => {
         <thead>
           <tr>
             <th>S.No</th>
-            <th>StudentName</th>
-            <th>CourseName</th>
-            <th>CourseDuration</th>
+            <th>Name</th>
+            <th>Email</th>
+            
           </tr>
         </thead>
         <tbody>
            {data.map((item, id)=>
-           <tr key = {item.id}>
+           <tr key = {id}>
            <td>{id + 1}</td>
-           <td>{item.studentName}</td>
-           <td>{item.courseName}</td>
-           <td>{item.courseDuration}</td>
+           <td>{item.Name}</td>
+           <td>{item.email}</td>
+           
            
        </tr>
            )
