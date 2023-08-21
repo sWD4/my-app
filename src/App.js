@@ -27,10 +27,22 @@ import UseEffect1 from "./component/Hooks/UseEffect1"
 import UseEffectAPI from "./component/Hooks/UseEffectAPI"
 import NextedList from "./component/Hooks/NextedList"
 import CertificateDisplay from "./component/Hooks/CertificateDisplay"
-
+import Bootstrap from "./component/Hooks/Bootstrap"
+import ReuseComponent from "./component/Hooks/ReuseComponent"
 function App() {
-  const[data,setdata] = useState('shubham sharma')
-  let name = 'shubham'
+  // const[data,setdata] = useState('shubham sharma')
+  // let name = 'shubham'
+  const user=[
+    {
+      name:"anil",email:"ram@gmail.com",phone:34455
+    },
+    {
+      name:"anil",email:"ram@gmail.com",phone:34455
+    },
+    {
+      name:"anil",email:"ram@gmail.com",phone:34455
+    }
+   ]
   return (
     <>
     <Header/>
@@ -52,7 +64,16 @@ function App() {
     {/* <UseEffect1/> */}
     {/* <UseEffectAPI/> */}
     {/* <NextedList/> */}
-    <CertificateDisplay/>
+    {/* <CertificateDisplay/> */}
+    {/* <Bootstrap/> */}
+    
+    {
+        user.map((item,i)=>
+        <ReuseComponent data = {item}/>
+        // <h1>{item.name}</h1>
+        )
+    }
+   
     
     {/* <Routes>
       <Route path="/" element = {<Home/>} />
