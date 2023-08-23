@@ -29,20 +29,27 @@ import NextedList from "./component/Hooks/NextedList"
 import CertificateDisplay from "./component/Hooks/CertificateDisplay"
 import Bootstrap from "./component/Hooks/Bootstrap"
 import ReuseComponent from "./component/Hooks/ReuseComponent"
+import SendDataChild from "./component/Hooks/SendDataChild"
+import UseMemo from "./component/Hooks/UseMemo"
 function App() {
-  // const[data,setdata] = useState('shubham sharma')
-  // let name = 'shubham'
-  const user=[
-    {
-      name:"anil",email:"ram@gmail.com",phone:34455
-    },
-    {
-      name:"anil",email:"ram@gmail.com",phone:34455
-    },
-    {
-      name:"anil",email:"ram@gmail.com",phone:34455
-    }
-   ]
+  const[data,setdata] = useState('shubham sharma')
+  let name = 'shubham'
+  // const user=[
+  //   {
+  //     name:"anil",email:"ram@gmail.com",phone:34455
+  //   },
+  //   {
+  //     name:"anil",email:"ram@gmail.com",phone:34455
+  //   },
+  //   {
+  //     name:"anil",email:"ram@gmail.com",phone:34455
+  //   }
+  //  ]
+   
+function parent(data){
+  alert(data.name)
+}
+  
   return (
     <>
     <Header/>
@@ -67,12 +74,16 @@ function App() {
     {/* <CertificateDisplay/> */}
     {/* <Bootstrap/> */}
     
-    {
+    {/* {
         user.map((item,i)=>
         <ReuseComponent data = {item}/>
         // <h1>{item.name}</h1>
         )
-    }
+    } */}
+
+    <UseMemo/>
+
+    {/* <SendDataChild alert = {parent}/> */}
    
     
     {/* <Routes>
