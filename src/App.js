@@ -36,6 +36,8 @@ import { useRef } from "react"
 import ForwardRef from "./component/Hooks/ForwardRef"
 import User from "./component/Curd/User"
 import Display from "./component/Curd/Display"
+import ControlComponent from "./component/Hooks/ControlComponent"
+import UnControlComponent from "./component/Hooks/UnControlComponent"
 function App() {
   const[data,setdata] = useState('shubham sharma')
   let name = 'shubham'
@@ -97,8 +99,10 @@ function App() {
         {/* <UseRef/> */}
         {/* <ForwardRef ref = {inputRef}/>
         <button onClick={updateInput}>update input</button> */}
-        <User/>
-        <Display/>
+        {/* <User/>
+        <Display/> */}
+        {/* <ControlComponent/> */}
+        <UnControlComponent/>
     {/* <SendDataChild alert = {parent}/> */}
    
     
