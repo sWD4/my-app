@@ -13,7 +13,7 @@ import Props from "./component/Props"
 import { useState } from "react"
 import HideShowToggle from "./component/HideShowToggle"
 import Condition from "./component/Condition"
-import User from "./component/User"
+// import User from "./component/User"
 // import PageNotFound from "./component/PageNotFound"
 // import Click from "./component/Click"
 import Form from "./component/Form"
@@ -31,6 +31,11 @@ import Bootstrap from "./component/Hooks/Bootstrap"
 import ReuseComponent from "./component/Hooks/ReuseComponent"
 import SendDataChild from "./component/Hooks/SendDataChild"
 import UseMemo from "./component/Hooks/UseMemo"
+import UseRef from "./component/Hooks/UseRef"
+import { useRef } from "react"
+import ForwardRef from "./component/Hooks/ForwardRef"
+import User from "./component/Curd/User"
+import Display from "./component/Curd/Display"
 function App() {
   const[data,setdata] = useState('shubham sharma')
   let name = 'shubham'
@@ -45,11 +50,18 @@ function App() {
   //     name:"anil",email:"ram@gmail.com",phone:34455
   //   }
   //  ]
+  function parent(data){
+    alert(data.name)
+  }
+    
+
+  let inputRef = useRef()
+  function updateInput(){
+    inputRef.current.value = '1000'
+    inputRef.current.style.color = 'red'
+  }
    
-function parent(data){
-  alert(data.name)
-}
-  
+
   return (
     <>
     <Header/>
@@ -81,8 +93,12 @@ function parent(data){
         )
     } */}
 
-    <UseMemo/>
-
+    {/* <UseMemo/> */}
+        {/* <UseRef/> */}
+        {/* <ForwardRef ref = {inputRef}/>
+        <button onClick={updateInput}>update input</button> */}
+        <User/>
+        <Display/>
     {/* <SendDataChild alert = {parent}/> */}
    
     
