@@ -38,6 +38,7 @@ import User from "./component/Curd/User"
 import Display from "./component/Curd/Display"
 import ControlComponent from "./component/Hooks/ControlComponent"
 import UnControlComponent from "./component/Hooks/UnControlComponent"
+import UseCallBack from "./component/Hooks/UseCallBack"
 function App() {
   const[data,setdata] = useState('shubham sharma')
   let name = 'shubham'
@@ -102,7 +103,8 @@ function App() {
         {/* <User/>
         <Display/> */}
         {/* <ControlComponent/> */}
-        <UnControlComponent/>
+        {/* <UnControlComponent/> */}
+        <UseCallBack/>
     {/* <SendDataChild alert = {parent}/> */}
    
     
