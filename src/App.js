@@ -39,8 +39,9 @@ import Display from "./component/Curd/Display"
 import ControlComponent from "./component/Hooks/ControlComponent"
 import UnControlComponent from "./component/Hooks/UnControlComponent"
 import UseCallBack from "./component/Hooks/UseCallBack"
+import UseReducer from "./component/Hooks/UseReducer"
 function App() {
-  const[data,setdata] = useState('shubham sharma')
+  const [data, setdata] = useState('shubham sharma')
   let name = 'shubham'
   // const user=[
   //   {
@@ -53,62 +54,63 @@ function App() {
   //     name:"anil",email:"ram@gmail.com",phone:34455
   //   }
   //  ]
-  function parent(data){
+  function parent(data) {
     alert(data.name)
   }
-    
+
 
   let inputRef = useRef()
-  function updateInput(){
+  function updateInput() {
     inputRef.current.value = '1000'
     inputRef.current.style.color = 'red'
   }
-   
+
 
   return (
     <>
-    <Header/>
-    {/* <Click/> */}
-    {/* <State/> */}
-    {/* <State1/> */}
-    {/* <Props name = {data}/>
+      <Header />
+      {/* <Click/> */}
+      {/* <State/> */}
+      {/* <State1/> */}
+      {/* <Props name = {data}/>
     <button onClick={()=>setdata('ram')}>click me</button> */}
-    {/* <HideShowToggle/> */}
-    {/* <Condition/> */}
-    {/* <Form/> */}
-    {/* <User n = {name}/> */}
-    {/* <Cstate/> */}
-    {/* <Constructor/> */}
-    {/* <Render1/> */}
-    {/* <ComponentDidMount/> */}
-    {/* <useState/> */}
-    {/* <UseEffect/> */}
-    {/* <UseEffect1/> */}
-    {/* <UseEffectAPI/> */}
-    {/* <NextedList/> */}
-    {/* <CertificateDisplay/> */}
-    {/* <Bootstrap/> */}
-    
-    {/* {
+      {/* <HideShowToggle/> */}
+      {/* <Condition/> */}
+      {/* <Form/> */}
+      {/* <User n = {name}/> */}
+      {/* <Cstate/> */}
+      {/* <Constructor/> */}
+      {/* <Render1/> */}
+      {/* <ComponentDidMount/> */}
+      {/* <useState/> */}
+      {/* <UseEffect/> */}
+      {/* <UseEffect1/> */}
+      {/* <UseEffectAPI/> */}
+      {/* <NextedList/> */}
+      {/* <CertificateDisplay/> */}
+      {/* <Bootstrap/> */}
+
+      {/* {
         user.map((item,i)=>
         <ReuseComponent data = {item}/>
         // <h1>{item.name}</h1>
         )
     } */}
 
-    {/* <UseMemo/> */}
-        {/* <UseRef/> */}
-        {/* <ForwardRef ref = {inputRef}/>
+      {/* <UseMemo/> */}
+      {/* <UseRef/> */}
+      {/* <ForwardRef ref = {inputRef}/>
         <button onClick={updateInput}>update input</button> */}
-        {/* <User/>
+      {/* <User/>
         <Display/> */}
-        {/* <ControlComponent/> */}
-        {/* <UnControlComponent/> */}
-        <UseCallBack/>
-    {/* <SendDataChild alert = {parent}/> */}
-   
-    
-    {/* <Routes>
+      {/* <ControlComponent/> */}
+      {/* <UnControlComponent/> */}
+      {/* <UseCallBack/> */}
+      <UseReducer />
+      {/* <SendDataChild alert = {parent}/> */}
+
+
+      {/* <Routes>
       <Route path="/" element = {<Home/>} />
       <Route path="/about" element = {<About/>} />
       <Route path="/team" element = {<Team/>} />
@@ -117,7 +119,7 @@ function App() {
       {/* <Route path="*" element = {<PageNotFound/>} />
     </Routes> */}
 
-    {/* <Footer/> */}
+      {/* <Footer/> */}
     </>
   )
 }
