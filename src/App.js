@@ -40,6 +40,9 @@ import ControlComponent from "./component/Hooks/ControlComponent"
 import UnControlComponent from "./component/Hooks/UnControlComponent"
 import UseCallBack from "./component/Hooks/UseCallBack"
 import UseReducer from "./component/Hooks/UseReducer"
+import UseContext from "./component/Hooks/context/UseContext"
+import A from "./component/Hooks/context/A"
+
 function App() {
   const [data, setdata] = useState('shubham sharma')
   let name = 'shubham'
@@ -106,7 +109,10 @@ function App() {
       {/* <ControlComponent/> */}
       {/* <UnControlComponent/> */}
       {/* <UseCallBack/> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      {/* <UseContext/> */}
+     
+      {/* <A/> */}
       {/* <SendDataChild alert = {parent}/> */}
 
 

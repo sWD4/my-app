@@ -12,6 +12,7 @@ function UseReducer() {
             <button onClick={() => setCount(count - 1)}>DECREMENT Count</button>
             <br /><br />
             <UseReducer1 />
+            
         </>
     )
 }
