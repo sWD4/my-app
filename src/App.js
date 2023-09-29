@@ -101,7 +101,7 @@ function App() {
     } */}
 
       {/* <UseMemo/> */}
-      {/* <UseRef/> */}
+      <UseRef/>
       {/* <ForwardRef ref = {inputRef}/>
         <button onClick={updateInput}>update input</button> */}
       {/* <User/>

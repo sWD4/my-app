@@ -5,7 +5,7 @@ function ChildComponent({ increment }) {
   return (
     <>
       <h1>child component</h1>
-      <button onClick={increment}>increment</button>
+      <button onClick = {increment}>increment</button>
     </>
   )
 }
